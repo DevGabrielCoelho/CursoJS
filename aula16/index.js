@@ -35,5 +35,5 @@ console.log(vet.slice(2, 5));
 
 console.log(typeof vet);
 
-console.log(vet instanceof Array)
+console.log(vet instanceof Array);
 
