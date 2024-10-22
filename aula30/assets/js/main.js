@@ -1,6 +1,7 @@
 function jsApp (){
   const h2 = document.querySelector(".dataHora");
   const hora = new Date();
+  const minutos = hora.getMinutes();
   const horaFormatada = `${
     (hora.getDay() == 0 && "Domingo") ||
     (hora.getDay() == 1 && "Segunda-Feira") ||
@@ -22,7 +23,8 @@ function jsApp (){
     (hora.getMonth() == 9 && "Outubro") ||
     (hora.getMonth() == 10 && "Novembro") ||
     (hora.getMonth() == 11 && "Dezembro")
-  } de ${hora.getFullYear()}<br/>${hora.getHours()}:${hora.getMinutes()}`;
+  } de ${hora.getFullYear()}<br/>${hora.getHours()}:${minutos > 9 ? minutos : 
+    (`0` + minutos.toString())}`;
   h2.innerHTML = horaFormatada + `<br/>`;
 }
 
